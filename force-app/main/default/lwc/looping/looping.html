@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="looping - for each">
+        <div class="slds-m-around_medium">
+            <template for:each={players} for:item='player'>
+                <ul key={player} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{player}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="looping - iterator">
+        <div class="slds-m-around_medium">
+            <template iterator:player={playerList}>
+                <div key={player.value.id}>
+                    <template if:true={player.first}>
+                        <div class="slds-box slds-theme_shade">
+                            <p>Player list </p>
+                        </div>
+                    </template>
+                    <ul class="slds-has-dividers_around-space">
+                        <li class="slds-item">{player.value.name} - <strong>{player.value.role}</strong></li>
+                    </ul>
+                    <template if:true={player.last}>
+                        <div class="slds-box slds-theme_shade">
+                            <p>List finished</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
