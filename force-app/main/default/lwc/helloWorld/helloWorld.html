@@ -6,4 +6,12 @@
             <div>{title}</div>
         </div>
     </lightning-card>
+
+    <lightning-card title="@track property">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Update your title" onkeyup={handleAddressChange} ></lightning-input>
+            <div>{address.city}</div>
+            <div>{address.pinCode}</div>
+        </div>
+    </lightning-card>
 </template>
