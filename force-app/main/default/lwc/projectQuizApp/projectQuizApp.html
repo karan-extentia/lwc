@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Quiz App">
+        <div class="slds-m-around_medium">
+            <template if:true={isSubmitted}>
+                <div class="slds-m-around_medium">
+                    <p class={isScoredFull}>You have scored {correctAnswers} out of {questionList.length}</p>
+                </div>
+            </template>
+            <form>
+                <template for:each={questionList} for:item="question">
+                    <div key={question.id} class="slds-m-around_medium">
+                        <div><strong>{question.id} - {question.question}</strong></div>
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col">
+                                <input type="radio" name={question.id} value="a" onchange={handleRadioChange} />
+                                {question.options.a}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={question.id} value="b" onchange={handleRadioChange} />
+                                {question.options.b}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={question.id} value="c" onchange={handleRadioChange} />
+                                {question.options.c}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <lightning-button
+                    variant="neutral"
+                    type="reset"
+                    label="Reset"
+                    title="Reset Quiz"
+                    class="slds-m-around_small"
+                    onclick={handleReset}></lightning-button>
+                <lightning-button
+                    variant="brand"
+                    type="submit"
+                    label="Submit"
+                    title="Submit Quiz"
+                    class="slds-m-around_small"
+                    onclick={handleSubmit}
+                    disabled={submitDisabled}></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>
