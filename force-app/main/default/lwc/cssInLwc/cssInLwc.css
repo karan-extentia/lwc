@@ -1,0 +1,13 @@
+p {
+    color: purple;
+}
+
+.name {
+    color: plum;
+    font-size: 32px;
+}
+
+.name:hover {
+    color: red;
+    font-size: 48px;
+}
