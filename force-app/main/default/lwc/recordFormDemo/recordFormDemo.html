@@ -2,7 +2,7 @@
     <lightning-card title="Create Record using lightning-record-form">
         <div class="slds-m-around_medium">
             <lightning-record-form
-                object-api-name={objectApiName}
+                object-api-name={objectName}
                 fields={fieldList}
                 onsuccess={successHandler}
             ></lightning-record-form>
@@ -12,8 +12,8 @@
     <lightning-card title="Display Record using lightning-record-form">
         <div class="slds-m-around_medium">
             <lightning-record-form
-                record-id={recordId}
-                object-api-name={objectApiName}
+                record-id="0015j000017X7jBAAS"
+                object-api-name={objectName}
                 fields={fieldList}
             ></lightning-record-form>
         </div>
@@ -24,8 +24,8 @@
     >
         <div class="slds-m-around_medium">
             <lightning-record-form
-                record-id={recordId}
-                object-api-name={objectApiName}
+                record-id="0015j000017X7jBAAS"
+                object-api-name={objectName}
                 fields={fieldList}
                 mode="readonly"
             ></lightning-record-form>
@@ -35,8 +35,8 @@
     <lightning-card title="Edit Record using lightning-record-form">
         <div class="slds-m-around_medium">
             <lightning-record-form
-                record-id={recordId}
-                object-api-name={objectApiName}
+                record-id="0015j000017X7jBAAS"
+                object-api-name={objectName}
                 fields={fieldList}
                 mode="edit"
                 columns="2"
@@ -47,8 +47,8 @@
     <lightning-card title="Edit Record with layout using lightning-record-form">
         <div class="slds-m-around_medium">
             <lightning-record-form
-                record-id={recordId}
-                object-api-name={objectApiName}
+                record-id="0015j000017X7jBAAS"
+                object-api-name={objectName}
                 mode="edit"
                 columns="2"
                 layout-type="Compact"
