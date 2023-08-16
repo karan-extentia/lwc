@@ -10,4 +10,20 @@
             </template>
         </div>
     </lightning-card>
+
+    <lightning-card title="getObjectInfos Adapter Demo">
+        <div class="slds-m-around_medium">
+            <template lwc:if={objectInfos}>
+                <template for:each={objectInfos.results} for:item="object">
+                    <div key={object.result.apiName}>
+                        <p>Object Api Name - {object.result.apiName}</p>
+                        <p>
+                            defaultRecordTypeId -
+                            {object.result.defaultRecordTypeId}
+                        </p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
 </template>
