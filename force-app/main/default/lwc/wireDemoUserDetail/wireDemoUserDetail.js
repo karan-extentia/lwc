@@ -13,7 +13,7 @@ export default class WireDemoUserDetail extends LightningElement {
   //   property or function
 
   @wire(getRecord, {
-    recordId: "0055j0000087otcAAA",
+    recordId: "$userId",
     fields: [NAME_FIELD, EMAIL_FIELD]
   })
   userDetailHandler({ data, error }) {
@@ -28,7 +28,7 @@ export default class WireDemoUserDetail extends LightningElement {
   }
 
   @wire(getRecord, {
-    recordId: "0055j0000087otcAAA",
+    recordId: "$userId",
     fields: [NAME_FIELD, EMAIL_FIELD]
   })
   userDetailProperty;
