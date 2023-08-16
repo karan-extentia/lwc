@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="User Detail Wire Demo as function">
+        <div class="slds-m-around_medium">
+            <p>{userId}</p>
+            <template lwc:if={userDetails}>
+                <p>Name - {userDetails.Name.value}</p>
+                <p>Email - {userDetails.Email.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="User Detail Wire Demo as property">
+        <div class="slds-m-around_medium">
+            <p>{userId}</p>
+            <template lwc:if={userDetailProperty.data}>
+                <p>Name - {userDetailProperty.data.fields.Name.value}</p>
+                <p>Email - {userDetailProperty.data.fields.Email.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
