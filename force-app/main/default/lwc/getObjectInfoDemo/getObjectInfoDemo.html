@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="getObjectInfo Adapter Demo">
+        <div class="slds-m-around_medium">
+            <template lwc:if={objectInfo.data}>
+                <!-- <p>Check console for getObjectInfo data and error</p> -->
+                <p>
+                    defaultRecordTypeId - {objectInfo.data.defaultRecordTypeId}
+                </p>
+                <p>Object Api Name - {objectInfo.data.apiName}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
