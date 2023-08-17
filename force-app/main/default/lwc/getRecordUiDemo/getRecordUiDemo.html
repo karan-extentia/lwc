@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="getRecordUi Adapter Demo">
+        <div class="slds-m-around_medium">
+            <template for:each={recordUiData} for:item="record">
+                <div key={record.id}>
+                    <p>{record.apiName}</p>
+                    <p>Name - {record.fields.Name.value}</p>
+                    <p>
+                        Annual Revenue -
+                        {record.fields.AnnualRevenue.displayValue}
+                    </p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
